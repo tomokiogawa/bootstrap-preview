@@ -75,7 +75,12 @@ body, html {
   border-bottom: 1px solid #1a3a5a;
 }
 
-#copy-btn {
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.header-btn {
   background-color: #1a3a5a;
   color: #00ff00;
   border: 1px solid #00ff00;
@@ -89,13 +94,23 @@ body, html {
   transition: all 0.2s;
 }
 
-#copy-btn:hover {
+.header-btn:hover {
   background-color: #00ff00;
   color: #0b1a2a;
 }
 
-#copy-btn:active {
+.header-btn:active {
   transform: scale(0.95);
+}
+
+#clear-btn {
+  color: #ff4444;
+  border-color: #ff4444;
+}
+
+#clear-btn:hover {
+  background-color: #ff4444;
+  color: #fff;
 }
 
 #editor-mount {

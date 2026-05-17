@@ -207,6 +207,16 @@ copyBtn.addEventListener('click', () => {
   });
 });
 
+// Clear button functionality
+const clearBtn = document.getElementById('clear-btn');
+clearBtn.addEventListener('click', () => {
+  if (confirm('エディタの内容をすべてクリアしますか？')) {
+    view.dispatch({
+      changes: { from: 0, to: view.state.doc.length, insert: '' }
+    });
+  }
+});
+
 // Simple resizer logic (for mouse and touch)
 const resizer = document.getElementById('resizer');
 const previewContainer = document.getElementById('preview-container');
